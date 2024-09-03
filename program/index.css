@@ -28,7 +28,7 @@
     background-repeat: no-repeat;
     background-position:center;
     background-size:cover;
-    background-attachment: fixed;
+    background-attachment:fixed;
     height:550px;
     width:100%;
 }
@@ -40,4 +40,24 @@
     background: linear-gradient(180deg, rgba(252,252,252,0.1016456582633054) 0%, rgba(252,252,252,0.291281512605042) 100%);
     width:100%;
     height:550px;
+}
+.downimage{
+    width:1000px;
+    height:40px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.btnforbtn{
+    background-color:lightblue;
+    border:1px solid black;
+    height:40px;
+    width:10%;
+    border-radius:10px;
+    box-shadow: 0 0 3px black;
+}
+.searchplace{
+    height:auto;
+    width:95%;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: justify;
 }
