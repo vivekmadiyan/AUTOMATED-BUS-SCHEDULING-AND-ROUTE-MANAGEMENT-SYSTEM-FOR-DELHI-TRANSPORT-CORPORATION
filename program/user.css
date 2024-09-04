@@ -22,6 +22,9 @@
     margin-top:0px;
     background-color:white;
 }
+.btn1:hover{
+    text-decoration: underline;
+}
 .leftimage{
     margin-left:270px;
     margin-top:30px;

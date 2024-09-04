@@ -22,6 +22,9 @@
     margin-top:0px;
     background-color:white;
 }
+.btn1:hover{
+    text-decoration: underline;
+}
 .image1{
     background-image:url("map.png");
     background-repeat: no-repeat;
@@ -56,6 +59,10 @@
     width:10%;
     border-radius:10px;
     cursor: pointer;
+}
+.btnforbtn:hover{
+    background-color:rgb(80, 195, 80);
+
 }
 .searchplace{
     height:auto;
