@@ -3,23 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="user1.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <title>Where is my Train</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #007bff;
+            color: white;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .header .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header .time {
+            font-size: 18px;
+            color: #eee;
+        }
+
+        .header .icon {
+            font-size: 24px;
+            color: white;
+        }
+
+        .nav-tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: #007bff;
+            padding: 10px 0;
+        }
+
+        .nav-tabs .tab {
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #0056b3;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .nav-tabs .tab.active {
+            background-color: #004085;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .section .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .section .input {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .section .input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .section .input .icon {
+            font-size: 20px;
+            color: #007bff;
+            margin-right: 10px;
+        }
+
+        .section .button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .section .list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section .list .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .section .list .item .text {
+            font-size: 16px;
+        }
+
+        .section .list .item .icon {
+            font-size: 20px;
+            color: #007bff;
+        }
+    </style>
 </head>
 <body>
     <div class="top">
         <ul>
             <li>
-                <div></div>
                 <img src="bus-512.png" height="30px" style="padding-left:20px;" alt="">
                 <span style="font-size:xx-large; font-weight: bold;margin-right:40px;">DTC</span>
-                <button class="btn1" onclick="location.href='user.html'"
-                    style="color:white;background-color:rgb(216, 145, 11);">
-                    Crew</button>
+                <button class="btn1" onclick="location.href='index.html'" style="color:white;background-color:rgb(216, 145, 11);">
+                    Home</button>
                 <button class="btn1" onclick="location.href='admin.html'">Admin</button>
+                <button class="btn1" onclick="location.href='#'">Crew</button>
                 <button class="btn1" onclick="location.href='#'">About Us</button>
             </li>
         </ul>
-    </div>
+</div>
+    <header class="header">
+        <div class="title">Where is my BUS</div>
+        <!-- <div class="time">2:44</div> -->
+        <!-- <div class="icon">&#9776;</div> -->
+    </header>
+
+    <!-- <nav class="nav-tabs">
+        <div class="tab active">SPOT</div>
+        <div class="tab">PNR</div>
+        <div class="tab">TICKETS</div>
+    </nav> -->
+
+    <div class="content">
+        <div class="section">
+            <div class="title">From</div>
+            <div class="input">
+                <div class="icon">&#10003;</div>
+                <input type="text" placeholder="NDLS New Delhi">
+                <div class="icon">&#10006;</div>
+            </div>
+            <div class="input">
+                <div class="icon">&#10003;</div>
+                <input type="text" placeholder="VRBD Vrindaban Road">
+                <div class="icon">&#10006;</div>
+            </div>
+            <button class="button">Find Bus</button>
+        </div>
+
+        <div class="section">
+            <div class="title">Spot Train</div>
+            <div class="input">
+                <div class="icon">&#128220;</div>
+                <input type="text" placeholder="Bus No. / Bus Name">
+                <div class="icon">&#128269;</div>
+            </div>
+        </div>
+
+        <!-- <div class="section">
+            <div class="title">Live Station</div>
+            <div class="input">
+                <div class="icon">&#128211;</div>
+                <input type="text" value="ETW Etawah Junction" >
+                <div class="icon">&#10006;</div>
+                <div class="icon">&#128269;</div>
+            </div>
+        </div> -->
+
+        <!-- <div class="section">
+            <div class="title">Search History</div>
+            <ul class="list">
+                <li class="item">
+                    <div class="text">04420 Ghaziabad - Mathura ...</div>
+                    <div class="icon">&#10095;</div>
+                </li>
+                <li class="item">
+                    <div class="text">04446 Shakur Basti - Mathur...</div>
+                    <div class="icon">&#10095;</div>
+                </li>
+                <li class="item">
+                    <div class="text">12419 Gomti Express</div>
+                    <div class="icon">&#10095;</div>
+                </li>
+                <li class="item">
+                    <div class="text">15084 Utsarg Express</div>
+                    <div class="icon">&#10095;</div>
+                </li>
+                <li class="item">
+                    <div class="text">12229 Lucknow Mail</div>
+                    <div class="icon">&#10095;</div>
+                </li>
+            </ul>
+        </div>
+    </div> -->
 </body>
 </html>
