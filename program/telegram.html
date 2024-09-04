@@ -1,0 +1,459 @@
+<!--
+// v0 by Vercel.
+// https://v0.dev/t/CN0jl8HntCL
+-->
+<link rel="stylesheet" href="globals.css">
+<style>:root{--background:0 0% 100%;--foreground:240 10% 3.9%;--card:0 0% 100%;--card-foreground:240 10% 3.9%;--popover:0 0% 100%;--popover-foreground:240 10% 3.9%;--primary:346.8 77.2% 49.8%;--primary-foreground:355.7 100% 99%;--secondary:240 4.8% 95.9%;--secondary-foreground:240 5.9% 10%;--muted:240 4.8% 95.9%;--muted-foreground:240 3.8% 45%;--accent:240 4.8% 95.9%;--accent-foreground:240 5.9% 10%;--destructive:0 72% 51%;--destructive-foreground:0 0% 98%;--border:240 5.9% 90%;--input:240 5.9% 90%;--ring:346.8 77.2% 49.8%;--chart-1:347 77% 50%;--chart-2:349 77% 62%;--chart-3:350 80% 72%;--chart-4:351 83% 82%;--chart-5:352 83% 91%;--radius:0.5rem;}img[src="/placeholder.svg"],img[src="/placeholder-user.jpg"]{filter:sepia(.3) hue-rotate(-60deg) saturate(.5) opacity(0.8) }</style>
+<style>h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; --font-sans-serif: 'Inter'; }
+</style>
+<style>body { font-family: 'Inter', sans-serif; --font-sans-serif: 'Inter'; }
+</style>
+<div class="flex flex-col w-full min-h-screen">
+  <header class="flex items-center h-16 px-4 border-b shrink-0 md:px-6">
+    <nav class="flex-col hidden gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
+      <a class="flex items-center gap-2 text-lg font-semibold md:text-base" href="#">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="w-6 h-6"
+        >
+          <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"></path>
+          <path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"></path>
+          <path d="M12 3v6"></path>
+        </svg>
+        <span class="sr-only">Acme Inc</span>
+      </a>
+      <a class="font-bold" href="#">
+        Dashboard
+      </a>
+      <a class="text-muted-foreground" href="#">
+        Investigations
+      </a>
+      <a class="text-muted-foreground" href="#">
+        Analytics
+      </a>
+      <a class="text-muted-foreground" href="#">
+        Settings
+      </a>
+    </nav>
+    <div class="flex items-center w-full gap-4 md:ml-auto md:gap-2 lg:gap-4">
+      <form class="flex-1 ml-auto sm:flex-initial">
+        <div class="relative">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
+          <input
+            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 pl-8 sm:w-[300px] md:w-[200px] lg:w-[300px]"
+            placeholder="Search users..."
+            type="search"
+          />
+        </div>
+      </form>
+      <button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-full">
+        <img
+          src="/placeholder.svg"
+          width="32"
+          height="32"
+          class="rounded-full"
+          alt="Avatar"
+          style="aspect-ratio: 32 / 32; object-fit: cover;"
+        />
+        <span class="sr-only">Toggle user menu</span>
+      </button>
+    </div>
+  </header>
+  <main class="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col gap-4 p-4 md:gap-8 md:p-10">
+    <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+        <div class="space-y-1.5 p-6 flex flex-row items-center justify-between pb-2">
+          <h3 class="whitespace-nowrap tracking-tight text-sm font-medium">Total Users</h3>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-4 h-4 text-muted-foreground"
+          >
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <div class="p-6">
+          <div class="text-2xl font-bold">12,345</div>
+          <p class="text-xs text-muted-foreground">+5.2% from last month</p>
+        </div>
+      </div>
+      <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+        <div class="space-y-1.5 p-6 flex flex-row items-center justify-between pb-2">
+          <h3 class="whitespace-nowrap tracking-tight text-sm font-medium">Suspicious Accounts</h3>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-4 h-4 text-muted-foreground"
+          >
+            <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path>
+            <line x1="12" x2="12" y1="8" y2="12"></line>
+            <line x1="12" x2="12.01" y1="16" y2="16"></line>
+          </svg>
+        </div>
+        <div class="p-6">
+          <div class="text-2xl font-bold">1,234</div>
+          <p class="text-xs text-muted-foreground">+12.1% from last month</p>
+        </div>
+      </div>
+      <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+        <div class="space-y-1.5 p-6 flex flex-row items-center justify-between pb-2">
+          <h3 class="whitespace-nowrap tracking-tight text-sm font-medium">Identified Traffickers</h3>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-4 h-4 text-muted-foreground"
+          >
+            <path d="m7.5 4.27 9 5.15"></path>
+            <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
+            <path d="m3.3 7 8.7 5 8.7-5"></path>
+            <path d="M12 22V12"></path>
+          </svg>
+        </div>
+        <div class="p-6">
+          <div class="text-2xl font-bold">345</div>
+          <p class="text-xs text-muted-foreground">+8% from last month</p>
+        </div>
+      </div>
+      <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+        <div class="space-y-1.5 p-6 flex flex-row items-center justify-between pb-2">
+          <h3 class="whitespace-nowrap tracking-tight text-sm font-medium">Active Investigations</h3>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-4 h-4 text-muted-foreground"
+          >
+            <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path>
+          </svg>
+        </div>
+        <div class="p-6">
+          <div class="text-2xl font-bold">57</div>
+          <p class="text-xs text-muted-foreground">+3 since last week</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+        <div class="relative w-full overflow-auto">
+          <table class="w-full caption-bottom text-sm">
+            <thead class="[&amp;_tr]:border-b">
+              <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0 w-[100px]">
+                  Username
+                </th>
+                <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                  Platform
+                </th>
+                <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
+                  Status
+                </th>
+                <th class="h-12 px-4 align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0 text-right">
+                  Actions
+                </th>
+              </tr>
+            </thead>
+            <tbody class="[&amp;_tr:last-child]:border-0">
+              <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">@johnsmith</td>
+                <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Telegram</td>
+                <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                  <div
+                    class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 text-xs"
+                    data-v0-t="badge"
+                  >
+                    Suspicious
+                  </div>
+                </td>
+                <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right">
+                  <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-4 w-4"
+                    >
+                      <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    <span class="sr-only">View</span>
+                  </button>
+                  <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-4 w-4"
+                    >
+                      <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path>
+                    </svg>
+                    <span class="sr-only">Investigate</span>
+                  </button>
+                </td>
+              </tr>
+              <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">@emilyjones</td>
+                <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">WhatsApp</td>
+                <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                  <div
+                    class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground text-xs"
+                    data-v0-t="badge"
+                  >
+                    Identified
+                  </div>
+                </td>
+                <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right">
+                  <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-4 w-4"
+                    >
+                      <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    <span class="sr-only">View</span>
+                  </button>
+                  <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-4 w-4"
+                    >
+                      <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path>
+                    </svg>
+                    <span class="sr-only">Investigate</span>
+                  </button>
+                </td>
+              </tr>
+              <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">@alexmartinez</td>
+                <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Instagram</td>
+                <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                  <div
+                    class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 text-xs"
+                    data-v0-t="badge"
+                  >
+                    Suspicious
+                  </div>
+                </td>
+                <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right">
+                  <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-4 w-4"
+                    >
+                      <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    <span class="sr-only">View</span>
+                  </button>
+                  <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-4 w-4"
+                    >
+                      <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path>
+                    </svg>
+                    <span class="sr-only">Investigate</span>
+                  </button>
+                </td>
+              </tr>
+              <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">@sarahdavis</td>
+                <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">Telegram</td>
+                <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                  <div
+                    class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 text-xs"
+                    data-v0-t="badge"
+                  >
+                    Suspicious
+                  </div>
+                </td>
+                <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right">
+                  <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-4 w-4"
+                    >
+                      <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    <span class="sr-only">View</span>
+                  </button>
+                  <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-4 w-4"
+                    >
+                      <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path>
+                    </svg>
+                    <span class="sr-only">Investigate</span>
+                  </button>
+                </td>
+              </tr>
+              <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">@michaelbrown</td>
+                <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">WhatsApp</td>
+                <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                  <div
+                    class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground text-xs"
+                    data-v0-t="badge"
+                  >
+                    Identified
+                  </div>
+                </td>
+                <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right">
+                  <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-4 w-4"
+                    >
+                      <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    <span class="sr-only">View</span>
+                  </button>
+                  <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-4 w-4"
+                    >
+                      <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path>
+                    </svg>
+                    <span class="sr-only">Investigate</span>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
